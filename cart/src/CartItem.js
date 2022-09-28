@@ -2,15 +2,7 @@
 import React from 'react'; 
 
  class CartItem extends React.Component{
-    constructor(){
-        super();
-        this.state={
-            price:25999,
-            title:'Realme Pad X',
-            qty:1,
-            img:''
-        }
-    }
+  
     increseQuantity=()=>{
         // SetState Form 1
         // this.setState({
@@ -41,12 +33,13 @@ import React from 'react';
         })
     }
     render(){
-        const{price,title,qty}=this.state
+     
+        const{price,title,qty}=this.props.product
         return(
             <div className="cart-item">
 
                 <div className="left-block">
-
+ 
                     <img style={styles.image} />
 
                 </div>
